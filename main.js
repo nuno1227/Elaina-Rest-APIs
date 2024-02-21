@@ -13,6 +13,11 @@ router.get('/api/game', (req, res) => {
     res.sendFile(__path + '/views/game.html')
 })
 
+router.get('/index.html', (req, res) => {
+    res.sendFile(__path + '/index.html')
+})
+
+
 router.get('/about', (req, res) => {
     res.sendFile(__path + '/views/about.html')
 })
