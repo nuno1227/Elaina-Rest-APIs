@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')  
 }
  
-var creator = "Xylaa"
+var creator = "Nuno7"
 var neoxr = "yntkts"
 var zeks = "administrator"
 var zeks2 = "apivinz"
@@ -106,113 +106,113 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter apikey'
+        message: 'Insira os parâmetros da APIKEY.'
     },
     noturl: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter url'
+        message: 'Insira os parâmetros da URL.'
     },
     notgcname: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan paramer gcname'
+        message: 'Insira os parâmetros de GCNAME.'
         },
     notgcicon: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan paramer gcicon'
+        message: 'Insira os parâmetros de GCICON.'
         },
     notpp: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan paramer pp'
+        message: 'Insira os parâmetros pp.'
         },
     notbg: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan paramer bg'
+        message: 'Insira os parâmetros bg.'
         },
     notmemberCount: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan paramer memberCount'
+        message: 'Insira os parâmetros memberCount.'
         },
     notquery: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan parameter query'
+        message: 'Insira os parâmetros query.'
         },
     notkata: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter kata'
+        message: 'Insira os parâmetros kata.'
     },
     nottext: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text'
+        message: 'Insira os parâmetros de text.'
     },
     nottext2: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text2'
+        message: 'Insira os parâmetros text2.'
     },
     notnabi: {
         status: false,
         creator: `${creator}`,
         code: 406, 
-        message: 'masukan parameter nabi'
+        message: 'Insira os parâmetros nabi.'
     },
     nottext3: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text3'
+        message: 'Insira os parâmetros text3.'
     },
     nottheme: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter theme'
+        message: 'Insira os parâmetros theme.'
     },
     notusername: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter username'
+        message: 'Insira os parâmetros username.'
     },
     notvalue: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter value'
+        message: 'Insira os parâmetros value.'
     },
     invalidKey: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'apikey invalid'
+        message: 'Apikey inválida.'
     },
     invalidlink: {
         status: false,
         creator: `${creator}`,
-        message: 'error, mungkin link anda tidak valid.'
+        message: 'Erro, talvez este link esteja inválido.'
     },
     invalidkata: {
         status: false,
         creator: `${creator}`,
-        message: 'error, mungkin kata tidak ada dalam api.'
+        message: 'Erro, talvez a palavra não esteja na API.'
     },
     error: {
         status: false,
@@ -227,18 +227,18 @@ Akhir Pesan Error
 
 //router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["elaina", "xylaa", "XylaaMD"];
+const listkey = ["Keyfree", "nunebax"];
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
   if(listkey.includes(key)) {
     res.json({
-      message: 'apikey sudah terdaftar'
+      message: 'Apikey já registrada.'
     });
   } else {
     listkey.push(key);
     res.json({
-      message: `berhasil mendaftarkan ${key} Kedatabase apikey`
+      message: `Registrou com sucesso a apikey: ${key} no banco de dados.`
     });
   }
 });
@@ -249,12 +249,12 @@ router.delete("/apikey", async(req, res, next) => {
 	const key = req.query.delete;
 	if(listkey.includes(key)) {
 		res.json({
-			message: 'apikey tidak ada sebelumnya'
+			message: 'Essa apikey não existe.'
 			})
 			} else {
 	listkey.splice(key, 1)
 	res.json({
-		message: 'apikey berhasil dihapus' 
+		message: 'Apikey excluída com sucesso.' 
 });
  }
 });
